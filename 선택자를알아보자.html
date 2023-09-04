@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css 선택자</title>
+<style>
+    .red{color:red;}
+    .blue{color: blue;}
+     [class="green"]{color: green;}
+    [href]{color: aqua; display: block;}
+    dd,dt{color: navy;}
+    div>dd{color: gold;}
+    .box dd{color: hotpink;}
+    h2+h3{color: darkmagenta;}
+    .gg{color: tomato;}
+    #A~#B{color: lawngreen;}
+   h4::before{content:'<before>'}
+h4::after{content:'<after>'}
+a:link{color: darkkhaki;}
+a:visited{color: lightblue;}
+</style>
+</head>
+<body>
+    <p class="red">class red</p>
+    <h1 class="blue">class 블루</h1>
+    <h2>인접형제 선택자는 말그대로 </h2>
+    <h3>인접 즉+(1) 더하기 앞에 있는 태그와 <strong class="gg">"붙어있는 태그만"</strong></h3>
+    <dl>
+        <dt class="green">선택자 아이디</dt>
+        <dd>자식은 부모의 영향을 자식선택자만 가능 부모>자식</dd>
+    <dd>아이디는 유니크 하게 </dd>
+    <div>
+    <dd>.=클래스, #= id</dd>
+    </div>
+    <dd>[class="@@@"]로 []안에 속성을 넣어 설정하는 방법도 있음</dd>
+    <dd class="box">태그선택자[속성 선택자]</dd>
+    <dd>전체 선택자는*</dd>
+    <dd>내림차순으로 하단 모든 선택자를 설정하려면 그저 " "공백</dd>
+    <dd>특정 그룹만 설정하려면 ","사용</dd>
+
+
+</dl>
+    <h4>인접 즉+(1) 더하기 앞에 있는 태그와 <strong>"붙어있는 태그만"</strong></h4>
+
+    <ul>일반형제 선택자
+    <li id="A">tag0일반형제 선택자는</li>
+    <li id="B">tag1형제가 옷을 입을떄 아래동생의 동생의 동생과같이</li>
+    <li id="C">tag2"~"로 이어져있는 하위선택자 까지만 되어있는</li>
+
+</ul>
+
+    <a href="https://www.youtube.com/watch?v=mDtVNP6pWls&t=54s" target="_blank" title="유튜브 강의">
+       <strong>youtube</strong>
+    </a>
+
+</body>
+</html>
