@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>전환효과</title>
+<style>
+    body:hover .box{
+        width: 300px;
+        background-color: blue;
+    }
+    .box{
+        width: 100px;
+        height: 100px;
+        background-color: red;
+        transition-property: background-color,width;
+        transition-duration: 2s;
+        
+        margin: 10px;
+    }
+.box:hover {background-color: blue;
+width: 500px;}
+.box:nth-of-type(1){
+    transition-timing-function: linear;
+}
+.box :nth-of-type(2){
+    transition-timing-function: ease;
+}
+.box :nth-of-type(4){
+    transition-timing-function: ease-in;
+}
+.box :nth-of-type(5){
+    transition-timing-function: ease-out;
+}
+
+</style>
+</head>
+
+<body>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+
+</body>
+</html>
